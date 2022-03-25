@@ -1,7 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Topup Mama</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
@@ -15,10 +23,44 @@
 </nav>
 <section>
   <div class="landing">
-<h1>TopUp Mama</h1>
+    <h1>TopUp Mama</h1>
   </div>
-  <app-login></app-login>
-  <app-registration>>
+
+  <div class="content text-centre">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      mollitia tenetur nostrum autem earum facere eum<br />
+      amet consectetur possimus ipsum nemo eligendi alias ipsam. Necessitatibus
+      pariatur numquam mollitia rerum dolorem!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      mollitia tenetur nostrum autem earum facere eum<br />
+      amet consectetur possimus ipsum nemo eligendi alias ipsam. Necessitatibus
+      pariatur numquam mollitia rerum dolorem!
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      mollitia tenetur nostrum autem earum facere eum<br />
+      amet consectetur possimus ipsum nemo eligendi alias ipsam. Necessitatibus
+      pariatur numquam mollitia rerum dolorem!
+    </p>
+  </div>
+  <div class="hero">
+    <div class="split-left">
+      <div class="centered">
+        <img src="../assets/images/log.jpeg" alt="login background" />
+        <app-login></app-login>
+      </div>
+    </div>
+    <div class="split-left">
+      <div class="centered">
+        <img src="../assets/images/reg.jpeg" alt="registration background" />
+
+        <app-registration></app-registration>
+      </div>
+    </div>
+  </div>
 </section>
 
 <router-outlet></router-outlet>
