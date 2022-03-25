@@ -6,16 +6,19 @@ input[type=text], input[type=password] {
     width: 50%;
     padding: 12px 20px;
     margin: 8px 0;
-    display: inline-block;
+    display: inline;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    float: none;
+    white-space: nowrap;
 }
 button {
     background-color: blue;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
-    border: none;
+    border: 2px solid #bc8507;
     cursor: pointer;
-    width: 20%;
+    width: 10%;
+    border-radius: 12px;
   }
