@@ -21,6 +21,7 @@
     </div>
   </div>
 </nav>
+
 <section>
   <div class="landing">
     <h1>TopUp Mama</h1>
@@ -46,21 +47,27 @@
       pariatur numquam mollitia rerum dolorem!
     </p>
   </div>
-  <div class="hero">
+  <div style="display:block; width:100%;">
+    <div style="width:50%; float: left; display: inline-block;">
+      <app-login></app-login>
+    </div>
+    <div style="width:50%; float: left; display: inline-block;">
+      <app-registration></app-registration>
+    </div>
+  </div>
+
+  <!-- <div class="hero">
     <div class="split-left">
       <div class="centered">
-        <img src="../assets/images/log.jpeg" alt="login background" />
         <app-login></app-login>
       </div>
     </div>
-    <div class="split-left">
+    <div class="split-right">
       <div class="centered">
-        <img src="../assets/images/reg.jpeg" alt="registration background" />
-
         <app-registration></app-registration>
       </div>
-    </div>
-  </div>
+    </div> -->
+  <!-- </div> -->
 </section>
 
 <router-outlet></router-outlet>
