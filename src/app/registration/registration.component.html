@@ -1,6 +1,11 @@
 <div class="register">
   <div>
     <form action="form-group">
+      *ngIf = "!isSuccessful"
+      name = "form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f = "ngForm"
+      novalidate
       <div class="mb-6">
         <h1>Register</h1>
         <p>Create Account Here.</p>
@@ -21,6 +26,7 @@
           type="password"
           placeholder="Enter Password"
           name="psw"
+          []
           id="psw"
           required
         />
