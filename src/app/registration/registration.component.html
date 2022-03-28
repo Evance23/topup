@@ -1,11 +1,8 @@
 <div class="register">
   <div>
     <form action="form-group">
-      *ngIf = "!isSuccessful"
-      name = "form"
-      (ngSubmit)="f.form.valid && onSubmit()"
-      #f = "ngForm"
-      novalidate
+      *ngIf = "!isSuccessful" name = "form" (ngSubmit)="f.form.valid &&
+      onSubmit()" #f = "ngForm" novalidate
       <div class="mb-6">
         <h1>Register</h1>
         <p>Create Account Here.</p>
@@ -17,6 +14,7 @@
           class="form-control"
           placeholder="Enter Email"
           name="email"
+          [(ngModel)]="form.email"
           id="email"
           required
         />
@@ -26,21 +24,38 @@
           type="password"
           placeholder="Enter Password"
           name="psw"
-          []
+          [(ngModel)]="form.password"
           id="psw"
+          minlength="8"
+          #password="ngModel"
           required
         />
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors.required">Password is required</div>
+          <div *ngIf="password.errors.minlength">
+            Password must be at least 6 characters
+          </div>
+        </div>
 
         <p>
           By creating an account you agree to our
           <a href="#">Terms & Privacy</a>.
         </p>
-        <button type="submit" class="registerbtn">Register</button>
+        <div class="form-group">
+          <button type="submit" class="registerbtn">SignUp</button>
+        </div>
+        <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+          SignUp failed! <br />
+          {{ errorMessage }}
+        </div>
       </div>
-
       <div class="container signin">
         <p>Already have an account? <a href="#">Sign in</a>.</p>
       </div>
     </form>
+    <div class="alert alert-success" *ngIf ="isSuccessful">
+      Yay, your registration is successful!
+
+    </div>
   </div>
 </div>
