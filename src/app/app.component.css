@@ -5,6 +5,7 @@
 .content{
     text-align: center;
     font-style: italic;
+    background-image: url(../assets/images/pbg.avif);
 
 }
 .landing{
@@ -19,10 +20,13 @@
     width: 100px;
     display: inline;
     text-align: center;
-    /* float: right; */
+    float: right;
     border: 1px solid #e7e7e7;
 }
 .nav-link{
     float: right;
     
+}
+body{
+    background-color: slategray;
 }
