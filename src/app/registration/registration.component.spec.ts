@@ -5,7 +5,8 @@ import { RegistrationComponent } from './registration.component';
 describe('RegistrationComponent', () => {
   let component: RegistrationComponent;
   let fixture: ComponentFixture<RegistrationComponent>;
-
+  // let f: any = {};
+ 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ RegistrationComponent ]

@@ -31,8 +31,8 @@
           required
         />
         <div class="alert-danger" *ngIf="password.errors && f.submitted">
-          <div *ngIf="password.errors.required">Password is required</div>
-          <div *ngIf="password.errors.minlength">
+          <div *ngIf="f ['psw'].errors && f['psw'].errors ['required']">Password is required</div>
+          <div *ngIf="f ['psw'].errors && f['psw'].errors ['minlength']">
             Password must be at least 6 characters
           </div>
         </div>
